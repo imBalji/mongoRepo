@@ -12,14 +12,15 @@ public class InfoPrinter {
 		this.flightInfo = flightInfo;
 		this.flightInfo.stream().forEach(ele -> {
 			System.out.println("Id: " + ele.getId());
-			System.out.println("Departure: " + ele.getDepartureCity());
-			System.out.println("Destination: " + ele.getDestinationCity());
+			System.out.println("Departure: " + ele.getDepartureCity().getCity());
+			System.out.println("Destination: " + ele.getDestinationCity().getCity());
 			System.out.println("Description: " + ele.getDescription());
 			System.out.println("Type: " + ele.getType().toString());
 			System.out.println("Delayed? " + ele.isDelayed());
 			System.out.println("Duration: " + ele.getDurationMin());
 			System.out.println("Departure Data: " + ele.getDepartureDate().toString());
 			System.out.println("Model: " + ele.getAircraft().getModel() + "No. of seats: " + ele.getAircraft().getNbSeats());
+			System.out.println();
 		});
 	}
 }
